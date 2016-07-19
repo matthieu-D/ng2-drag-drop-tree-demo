@@ -2,8 +2,7 @@
  * Angular 2 decorators and services
  */
 import { Component, ViewEncapsulation } from '@angular/core';
-
-import { AppState } from './app.service';
+import {TreeManager} from 'ng2-drag-drop-tree/ng2-drag-drop-tree';
 
 /*
  * App Component
@@ -15,6 +14,7 @@ import { AppState } from './app.service';
   styleUrls: [
     './app.style.css'
   ],
+  providers:[TreeManager],
   template: `
     <nav>
       <span>
@@ -46,38 +46,9 @@ import { AppState } from './app.service';
       <router-outlet></router-outlet>
     </main>
 
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
     <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
+      <span>ng2-drag-drop-tree by <a href='https://twitter.com/MatthieuDrula'>@MatthieuDrula</a></span>
     </footer>
   `
 })
-export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
-
-  constructor(
-    public appState: AppState) {
-
-  }
-
-  ngOnInit() {
-    console.log('Initial App State', this.appState.state);
-  }
-
-}
-
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */
+export class App { }
