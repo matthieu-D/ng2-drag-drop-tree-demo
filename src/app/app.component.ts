@@ -1,6 +1,7 @@
 /*
  * Angular 2 decorators and services
  */
+require("font-awesome-webpack");
 import { Component, ViewEncapsulation } from '@angular/core';
 import {TreeManager} from 'ng2-drag-drop-tree/ng2-drag-drop-tree';
 
