@@ -21,4 +21,5 @@ import {TreeSearchTextField} from 'ng2-drag-drop-tree/ng2-drag-drop-tree';
   templateUrl: './home.template.html'
 })
 export class Home {
+  customClasses = {'icon':'icon-class'}
 }
